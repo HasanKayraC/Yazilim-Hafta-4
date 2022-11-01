@@ -1,0 +1,24 @@
+String bilgi = "";
+
+TextField(
+              onChanged: (yeniDeger) {
+                setState(() {
+                  bilgi = yeniDeger;
+                });
+              },
+            ),
+
+
+
+
+
+
+---------------
+
+  const IkinciSayfa({super.key, required this.gelenBilgi});
+  final String gelenBilgi;
+
+
+
+
+  Text(widget.gelenBilgi),
