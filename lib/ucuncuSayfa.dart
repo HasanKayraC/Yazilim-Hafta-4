@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
 
-class IkinciSayfa extends StatefulWidget {
-  const IkinciSayfa({super.key, required this.gelenBilgi});
-  final String gelenBilgi;
+class UcuncuSayfa extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _ikinciSayfaState();
+    return _UcuncuSayfaState();
   }
 }
 
-class _ikinciSayfaState extends State<IkinciSayfa> {
+class _UcuncuSayfaState extends State<UcuncuSayfa> {
   @override
   Widget build(Object context) {
     //---------------------------------> Scaffold Widget'i -Başlangıç
     return Scaffold(
         //---------------------------------> AppBar Özelliği -Başlangıç
         appBar: AppBar(
-          title: Text("2. Sayfa"),
+          backgroundColor: Colors.redAccent,
+          title: Text("3. Sayfa"),
         ),
         //---------------------------------> AppBar Özelliği -Bitiş
         //---------------------------------> Body Özelliği -Başlangıç
@@ -25,8 +24,8 @@ class _ikinciSayfaState extends State<IkinciSayfa> {
             height: 100,
             width: 350,
             alignment: Alignment.center,
-            color: Colors.green,
-            child: Text("Gelen Bilgi: " + widget.gelenBilgi),
+            color: Colors.red,
+            child: Text("Bu sayfayı sadece parolayı bilenler görebilir"),
           ),
         )
         //---------------------------------> Body Özelliği -Bitiş

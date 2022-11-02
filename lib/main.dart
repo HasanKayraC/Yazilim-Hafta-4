@@ -1,11 +1,14 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/ikinciSayfa.dart';
+import 'package:flutter_application_1/ucuncuSayfa.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-String bilgi = "";
+String bilgi = "---";
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -26,6 +29,7 @@ class MyApp extends StatelessWidget {
         '/iki': (context) => IkinciSayfa(
               gelenBilgi: bilgi,
             ),
+        '/uc': (context) => UcuncuSayfa(),
         //------------------------------------------
         // Bu araya yeni bir route ekle ve yönlendirmesini 3. sayfa yap
         //------------------------------------------
@@ -67,7 +71,31 @@ class _MyHomePageState extends State<MyHomePage> {
 
             //------------------------------------------
             //------------------------------------------
+            TextField(
+              textAlign: TextAlign.center,
+              onChanged: (value) {
+                setState(() {
+                  bilgi = value;
+                });
+              },
+            ),
+            SizedBox(
+              height: 50,
+            ),
             // Bu araya yeni bir buton ekle ve yönlendirmesini 3. sayfa yap
+            TextField(
+              decoration: InputDecoration(
+                  hintText:
+                      'Şifre'), //hint text yazı yazılmadan önce gösterilen yazıdır
+              textAlign: TextAlign.center,
+              onChanged: (value) {
+                if (value == "571") {
+                  Navigator.pushNamed(context,
+                      "/uc"); //eğer 571 yazarsa hemen 3. sayfaya gider.
+                }
+              },
+            ),
+
             //------------------------------------------
           ],
         ),
