@@ -26,7 +26,7 @@ class _ikinciSayfaState extends State<IkinciSayfa> {
             width: 350,
             alignment: Alignment.center,
             color: Colors.green,
-            child: Text("Gelen Bilgi: " + widget.gelenBilgi),
+            child: Text("Gelen Bilgi: "),
           ),
         )
         //---------------------------------> Body Özelliği -Bitiş
